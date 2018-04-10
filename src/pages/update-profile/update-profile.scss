@@ -1,0 +1,26 @@
+page-update-profile {
+    ion-header{
+        width:auto;
+        left:auto;
+        right:0px;
+        .toolbar-background-ios{
+            background:none!important;
+        }
+    }
+    .content-ios{
+        background:rgba(0,0,0,.4);
+        .scroll-content{
+            display: flex;
+            align-items: center;
+            .update{
+                background:color($colors,color4);
+                padding:$mainMarg;
+                width:100%;
+                .button-ios{
+                    margin-top:$mainMarg;
+                    height: $button-ios-height;
+                }
+            }
+        }
+    }
+}

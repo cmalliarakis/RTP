@@ -1,0 +1,20 @@
+page-sign-in {
+    .header-ios{
+        .back-button{
+            order: 1!important;
+        }
+        .toolbar-title-ios {
+            text-align: left;
+        }
+    }  
+    .appForm{
+        padding:40px 0px;
+    }
+    p{
+        @include whiteNormal(20px,1);
+        display:inline-block;
+        color: color($colors,color5);
+    }
+}
+
+

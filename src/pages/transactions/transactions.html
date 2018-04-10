@@ -1,0 +1,45 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Account Transactions</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+   <!-- account name , number and currancy -->
+  <div class="acountTitle">
+    <span>Account</span>
+
+    <p class="countNum">
+      123
+      <span>xxxxx</span>
+      12345
+    </p>
+
+    <span>33324 €</span>
+  </div>
+
+  <div class="appForm">
+    <p class="myLabel">Account Transactions</p>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-12 col-md-6 col-lg-4  *ngFor="let item of items" (click)="goTo('TransactionsDetailsPage')">
+          <button ion-item>
+            <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+            <p>{{item.date}}</p>
+            <p class="cost">{{item.cost}} €</p>
+            <p>{{item.address}}</p>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

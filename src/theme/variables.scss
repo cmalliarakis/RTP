@@ -32,44 +32,81 @@ $app-direction: ltr;
 // to match your app's branding. Ionic uses a Sass map of
 // colors so you can add, rename and remove colors as needed.
 // The "primary" color is the only required color in the map.
-
 $colors: (
   primary:    #488aff,
   secondary:  #32db64,
   danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222
+  light:      #fff,
+  dark:       #000,
+  color1:     #3d5e8b,
+  color2:     #eb9f0d,
+  color3:     #707070,
+  color4:     #eeeff1,
+  color5:   #383737,
+  faceColor:  #3a5a98,
+  twitterColor:#65a2d9,
+  googleColor:#ff5450
 );
 
 
-// App iOS Variables
-// --------------------------------------------------
-// iOS only Sass variables can go here
+// App  Variables
+$mainFont:1.3rem;
+ $appFonts:(h3:$mainFont + .3,h4:$mainFont + .1,h5:$mainFont,p:$mainFont - .1);
+ @each $head , $fontSize in $appFonts {
+      #{$head}{
+        font-size:$fontSize!important;
+      } 
+ }
 
+$mainHeight:44px;
+$mainRadius:1px;
+$mainMarg:10px;
+$iconFontSize:2rem; 
+$imgThumbnailSize:80px;
+// header Variables
 
+$toolbar-ios-height:$mainHeight;
+$toolbar-ios-button-font-size:1rem;
+$toolbar-ios-title-font-size:$mainFont;
+$toolbar-ios-title-font-weight:500;
+$toolbar-ios-title-text-align	:center;
+$toolBarBackGround:color($colors,color1);
+$toolbar-ios-title-text-color:color($colors,light);
+$navBarPadding:$mainMarg/2; 
+$headerIconSize:2.2rem; 
+$headerIconColor:color($colors,light);
 
+// appForm Variables
 
-// App Material Design Variables
-// --------------------------------------------------
-// Material Design only Sass variables can go here
+$floatingLabelHeight:24px; 
+$appInputHeight:34px;
+$inputFontSize:$mainFont; 
+$appFormRadius:1px;
+$inputPlaceHolderColor:color($colors,color3);
+$inputColor:color($colors,color5);
+//main Button Variables  
+$button-ios-height:$mainHeight;
+$button-ios-border-radius:4px;
+$button-ios-font-size:$mainFont;
+ 
+// Side Menu Variables
+$menu-width:300px;
+$menu-small-width:$menu-width;
+$menuItemHeight:34px; 
+$menu-ios-background:color($colors,color1);
+$menuFont-size:1.5rem;
+// Range Variables
+$range-ios-bar-height:20px;
+$range-ios-slider-height :$range-ios-bar-height;
 
-
-
-
-// App Windows Variables
-// --------------------------------------------------
-// Windows only Sass variables can go here
-
-
-
-
-// App Theme
-// --------------------------------------------------
-// Ionic apps can have different themes applied, which can
-// then be future customized. This import comes last
-// so that the above variables are used and Ionic's
-// default are overridden.
-
+// checkbox variable
+$checkbox-ios-background-color-off:color($colors,light);
+$checkbox-ios-background-color-on:color($colors,light);
+$checkbox-ios-icon-border-radius:1px;
+$checkbox-ios-icon-checkmark-width:2px;
+$checkbox-ios-disabled-opacity:1;
+$checkbox-ios-icon-size:16px;
+$checkbox-ios-icon-checkmark-color:color($colors,color2);
 @import "ionic.theme.default";
 
 

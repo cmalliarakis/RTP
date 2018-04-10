@@ -1,0 +1,76 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>About</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+<div class="appForm">
+  <ion-list>
+    <ion-list-header>
+        <b>Crypto€uro</b> - Real Time Payment System v.1.0
+    </ion-list-header>
+    <!--<button  style="height:50px;flex-flow: column;"  block ion-item>
+        <div ><b>Crypto€uro</b> - Real Time Payment System </div><div style="line-height: 40%;">in the context of CBDS (Central Bank Digital Currency)</div>
+    </button> !-->
+    <button style="height:30px;flex-flow: column;" block ion-item>
+
+<p style="text-align: justify; display:block; white-space: normal; word-wrap:break-word; vertical-align:bottom; width: 100%;">This app has been developed in the context of a Hackathon being held on 12 and 13 April in Frankfurt by ECB.</p>
+    </button>
+    <!--<button  block ion-item>
+      <ion-icon item-left name="ios-information"></ion-icon>
+        Version: v.1.0
+    </button>!-->
+
+      <button (click)="openWithSystemBrowser('tel:2106799315')" block ion-item>
+        <ion-icon item-left name="ios-call"></ion-icon>
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+          2106799315
+      </button>
+      <button  (click)="openWithSystemBrowser('https://www.bankofgreece.gr/Pages/en/default.aspx')" block ion-item>
+        <ion-icon item-left name="ios-globe-outline"></ion-icon>
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+          Central Bank of Greece
+      </button>
+  </ion-list>
+<!--  <ion-list>
+     <ion-list-header>
+        Follow Us
+    </ion-list-header>
+      <ion-item>
+        <button ion-button block color="faceColor" only-icon>
+          <ion-icon name="logo-facebook"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item>
+        <button ion-button block color="twitterColor" only-icon>
+          <ion-icon name="logo-twitter"></ion-icon>
+        </button>
+      </ion-item>
+      <ion-item>
+        <button ion-button block color="googleColor" only-icon>
+          <ion-icon name="logo-googleplus"></ion-icon>
+        </button>
+      </ion-item>
+    </ion-list> -->
+    <ion-list>
+      <ion-list-header>
+          Ask Us
+      </ion-list-header>
+        <ion-item>
+          <ion-textarea rows="3" placeholder="Your Question ?"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <button float-right ion-button color="color2">Send</button>
+  </div>
+</ion-content>

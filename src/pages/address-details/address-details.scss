@@ -1,0 +1,27 @@
+page-address-details {
+    ion-header{
+        width:auto;
+        left:auto;
+        right:0px;
+        .toolbar-background-ios{
+            background:none!important;
+        }
+    }
+    .content-ios{
+        background:rgba(0,0,0,.4);
+    }
+    .addressDetails{
+        padding:$mainMarg;
+        background-color: color($colors,light);
+        margin-top:$mainMarg + 34*2 + 40px;
+    }
+    p{
+        color:color($colors,color5);
+        margin:$mainMarg 0px 0px;
+        span{
+            &:first-of-type{
+                color: color($colors,color2);
+            }
+        }
+    }
+}

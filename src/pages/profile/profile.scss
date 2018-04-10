@@ -1,0 +1,38 @@
+page-profile {
+    .scroll-content{
+        text-align: center;
+        .imgBg{
+            @include borderRadius(90px);
+            position:relative;
+            .icon{
+                @include position(auto,0px,0px,auto);
+                @include borderRadius(30px);
+                font-size:2rem;
+                background-color:color($colors,color2);
+                color: color($colors,light);
+                
+            }
+        }
+        h4{
+            color:color($colors,color5);
+            margin:0px;
+            @include whiteNormal(20px,1);
+        }
+        p{
+            color: color($colors,color2);
+            margin:0px;
+            @include whiteNormal(20px,1);
+            .icon{
+                color: color($colors,color1);
+                font-size:1.6rem;
+                display:inline-block;
+            }
+        }
+        .appForm{
+            margin-top:$mainMarg;
+        }
+    }
+    .footer{
+        padding:0px $mainMarg $mainMarg;
+    }
+}   

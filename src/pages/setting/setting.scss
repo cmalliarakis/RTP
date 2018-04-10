@@ -1,0 +1,27 @@
+page-setting {
+    .appForm {
+        .list-ios{
+            margin-bottom:$mainMarg;
+            &:last-of-type{
+                margin-bottom:none;
+            }
+            .list-header-ios{
+                margin:0px!important;
+            }
+            .item-ios{
+                &.item-block {
+                    .label-ios{
+                        &[stacked]{
+                            color: color($colors,color1)!important; 
+                        }
+                    }
+                    .text-input-ios{
+                        &[type="password"]{
+                            color: color($colors,color2)!important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

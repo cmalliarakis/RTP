@@ -1,0 +1,16 @@
+page-find-us {
+    .myTitle{
+        height:34px;
+        line-height:34px;
+        max-height:34px;
+        display:inline-block;
+        min-width:$mainHeight;
+    }
+    .map{
+        height:calc(100% - (34px*2 + #{$mainMarg}));
+        min-height: 320px;
+    }
+    .notShow{
+        display:none;
+    }
+}

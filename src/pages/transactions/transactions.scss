@@ -1,0 +1,32 @@
+page-transactions {
+    .appForm{
+        background-color:color($colors,light);
+        @extend %boxShadow;
+        .myLabel{
+            margin: $mainMarg $mainMarg 0px $mainMarg;
+        }
+        .grid{
+            padding:$mainMarg/2;
+            .col{
+                padding:$mainMarg/2;
+                .item-ios{
+                    background-color: color($colors,color3);
+                    padding:$mainMarg;
+                    border-radius:$button-ios-border-radius;
+                    p{
+                        color: color($colors,light);
+                        margin:0px;
+                        @include whiteNoWrap(20px);
+                        &.cost{
+                            color: color($colors,color2);
+                        }
+                    }
+                    .label{
+                        height:auto!important;
+                        line-height:normal!important;
+                    }
+                }
+            }
+        }
+    }
+}

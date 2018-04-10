@@ -1,0 +1,37 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Find Us</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item class="searchItem">
+    <ion-icon name="ios-search" item-right></ion-icon>
+    <ion-input placeholder="Search"></ion-input>
+  </ion-item>
+  <p class="myTitle" (click)="change()">{{text}}</p>
+  <!-- list of addresses -->
+   <div class="appForm" *ngIf="text == 'Map'">
+    <ion-list [ngClass]="{'notShow':text =='List'}">
+      <button  block ion-item *ngFor="let item of items" (click)="callModal()">
+        <ion-icon item-left name="ios-pin" *ngIf="item.type == 'bank'"></ion-icon>
+        <ion-icon item-left name="ios-calculator" *ngIf="item.type == 'atm'"></ion-icon>
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+        {{item.address}}
+      </button> 
+    </ion-list> 
+  </div> 
+  <!-- Map of addresses -->
+  <div  class="map" #map id="map" [ngClass]="{'notShow':text =='Map'}"> </div>
+</ion-content>

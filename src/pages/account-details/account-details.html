@@ -1,0 +1,44 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Account Details</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <!-- account name , number and currancy -->
+  <div class="acountTitle">
+    <span>Account</span>
+
+    <p class="countNum">
+      123
+      <span>xxxxx</span>
+      12345
+    </p>
+
+    <span>33324 €</span>
+  </div>
+
+  <div class="details">
+    <p class="myLabel">Account Details</p>
+    <ion-grid>
+      <ion-row *ngFor="let item of items">
+        <ion-col col-8 text-left>
+          <p>{{item.name}}</p>
+        </ion-col>
+        <ion-col col-4 text-right>
+          <p>{{item.date}}</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <button ion-button block color="color2" (click)="goTo('TransactionsPage')">Account Transactions</button>
+  </div>
+</ion-content>

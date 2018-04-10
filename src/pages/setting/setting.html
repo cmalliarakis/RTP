@@ -1,0 +1,59 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Setting</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="appForm">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" value="5672897892"  placeholder="password"></ion-input>
+      </ion-item> 
+      <!-- Language Select -->
+      <ion-item >
+        <ion-label stacked>App Language</ion-label>
+          <ion-select  [(ngModel)]="language">
+             <ion-option value="en" >English</ion-option> 
+             <ion-option value="fr" >French</ion-option> 
+          </ion-select>
+      </ion-item>
+    </ion-list> 
+    <!-- Notification checkbox list -->
+    <ion-list>
+      <ion-list-header>
+          Notification
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Send me sms when i login</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+      <ion-item>
+        <ion-label>Notify me when there is new deposits</ion-label>
+        <ion-checkbox></ion-checkbox>
+      </ion-item>
+    </ion-list> 
+    <!-- Animation checkbox  -->
+    <!-- list in you need to add another checkbox -->
+    <ion-list>
+      <ion-list-header>
+          Animation
+      </ion-list-header>
+      <ion-item>
+        <ion-label>Animation Avilability</ion-label>
+        <ion-checkbox (ionChange)="animateApp($event)"  checked="{{action}}"></ion-checkbox>
+      </ion-item>
+    </ion-list> 
+  </div>
+</ion-content>

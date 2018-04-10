@@ -1,0 +1,53 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons>
+      <button ion-button icon-only (click)="dismiss()">
+        <ion-icon name="md-close-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="update">
+    <div class="appForm">
+      <ion-list>
+        <!-- to write full name -->
+        <ion-item>
+          <ion-label stacked>Full Name</ion-label>
+          <ion-input type="text"  placeholder="Full Name" [(ngModel)]="username"></ion-input>
+        </ion-item>
+        <!-- select country -->
+        <ion-item >
+          <ion-label stacked>Country</ion-label>
+            <ion-select   [(ngModel)]="country">
+              <ion-option value="Greece" >Greece</ion-option>
+              <ion-option value="Germany" >Germany</ion-option>
+              <ion-option value="france" >France</ion-option>
+            </ion-select>
+        </ion-item>
+          <!-- select city -->
+        <ion-item >
+          <ion-label stacked>City</ion-label>
+            <ion-select   [(ngModel)]="city">
+              <ion-option value="Athens" >Athens</ion-option>
+              <ion-option value="manchester">Manchester</ion-option>
+              <ion-option value="london" >London</ion-option>
+            </ion-select>
+        </ion-item>
+          <!-- write phone number -->
+        <ion-item>
+          <ion-label stacked>Phone</ion-label>
+          <ion-input type="num"  placeholder="Phone Number" [(ngModel)]="phone"></ion-input>
+        </ion-item>
+        <!-- write e-mailaddress -->
+        <ion-item>
+          <ion-label stacked>E-mail</ion-label>
+          <ion-input type="email"  placeholder="E-mail address" [(ngModel)]="email"></ion-input>
+        </ion-item>
+      </ion-list>
+    </div>
+    <button ion-button block color="color2" (click)="dismiss()">Save</button>
+  </div>
+</ion-content>

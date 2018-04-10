@@ -1,0 +1,27 @@
+page-account-details {
+    .content-ios{
+        .details{
+            background-color:color($colors,light);
+            padding:$mainMarg;
+            @extend %boxShadow;
+            .grid{
+                padding:0px;
+                margin-bottom:20px;
+                .col{
+                    padding:$mainMarg/4 0px;
+                    p{
+                        margin:0px;
+                        color: color($colors,color5);
+                        line-height:16px;
+                    }
+                    &:first-of-type{
+                        p{
+                            font-weight:500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

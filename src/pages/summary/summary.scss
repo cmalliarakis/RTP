@@ -1,0 +1,144 @@
+page-summary {
+    .grid{
+        padding:0px;
+        .col{
+            padding:0px;
+        }
+        &.blanceGrid{
+            .col{
+                padding:$mainMarg;
+            }
+            .avatarContent{
+                width: 120px;
+                height:120px;
+                padding:42px 20px 10px;
+                border-radius:50%;
+                border:1px solid color($colors,color1);
+                position:relative;
+                p{
+                    margin:0px;
+                    @include whiteNormal(28px,2);
+                    font-weight:400;
+                    color:color($colors,color5);
+                }
+                span{
+                    @include whiteNormal(24px,2);
+                    color:color($colors,color3);
+                    font-size:1.1rem;
+
+                }
+                img{
+                    @include borderRadius(75px);
+                    @include position(-15px,-40px,auto,auto);
+                }
+                .item-range{
+                    .range-ios{
+                         .range-bar{
+                             height:2px;
+                             &.range-bar-active{
+                                 background:color($colors,color2);
+                             }
+                         }
+                    }
+                }
+            }
+            .loginInfo{
+                h5{
+                    color: color($colors,color1);
+                    @include whiteNormal(20px,1);
+                    margin:0px;
+                    margin-left: 30px;
+                }
+                p{
+                    @include whiteNormal(28px, 2);
+                    color: color($colors,color3);
+                    margin: 0px;
+                    margin-left: 30px;
+                    &.myLabel{
+                        margin-top:$mainMarg;
+                    }
+                }
+            }
+        }
+    }
+    .graphs{
+        border-top:1px solid color($colors,color3);
+        border-bottom:1px solid color($colors,color3);
+        padding:$mainMarg 0px;
+        .list-header-ios{
+            padding:0px;
+            border-bottom:0px;
+            min-height:0px;
+            margin:$mainMarg 0px;
+            .label-ios{
+                @extend .myTitle;
+            }
+        }
+        .item-ios{
+            margin-bottom:$mainMarg!important;
+            .label{
+                margin:0px;
+                width:100%;
+                >p{
+                    @extend .myLabel;
+                }
+            }
+            .container{
+                background-color:color($colors,light);
+                padding:$mainMarg $mainMarg/2;
+                @extend %boxShadow;
+                margin: 1px;
+                p{
+                    display:inline-block;
+                    width:100%;
+                    margin:$mainMarg 0px 0px;
+                    span{
+                        color:color($colors,color3);
+                        @include whiteNormal(15px,1);
+                        display:inline-block;
+                        max-width:50%;
+                        padding:0px $mainMarg/2;
+                    }
+                }
+            }
+
+            .item-range{
+                width:calc(100% - #{$mainMarg});
+                margin:0px auto;
+                .range-ios{
+                        .range-bar{
+                            &.range-bar-active{
+                                background:color($colors,color1);
+                            }
+                        }
+                }
+            }
+        }
+    }
+    .mostUse{
+        $mostUseHeight:70px;
+        padding:$mainMarg 0px;
+        .button-ios{
+            background:none;
+            contain: content;
+            height:100%;
+            .button-inner{
+                display:block;
+                ion-icon{
+                    height:$mostUseHeight/2;
+                    color: color($colors,color3);
+                    font-weight:bolder;
+                    font-size:2.2rem;
+                }
+                p{
+                    white-space:normal;
+                    line-height: $mostUseHeight/4;
+                    color: color($colors,color3);
+                    margin:0px;
+                    font-weight:400;
+                }
+
+            }
+        }
+    }
+}

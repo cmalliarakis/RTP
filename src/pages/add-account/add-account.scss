@@ -1,0 +1,14 @@
+page-add-account {
+    .content-ios{
+        .appForm{
+            .item-ios{
+                &.list-header-ios{
+                    margin-bottom:$mainMarg;
+                }
+            }
+        }
+        .button-ios{
+            margin-top:$mainMarg;
+        }
+    }
+}

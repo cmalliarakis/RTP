@@ -1,0 +1,22 @@
+page-contact-us {
+    .appForm{
+        .list-ios{
+            margin-bottom:$mainMarg;
+            &:last-of-type{
+                margin-bottom:0px;
+            }
+            .list-header-ios{
+                margin:0px 0px $mainMarg!important;
+            }
+        }
+        >.button{
+            @extend %boxShadow;
+            width: auto;
+            min-width:80px;
+            height:34px;
+            border-radius:$appFormRadius;
+            margin-top:$mainMarg/2;
+
+        }
+    }
+}

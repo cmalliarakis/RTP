@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Currency Convertor</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="appForm">
+    <ion-list>
+      <ion-list-header>
+          Convertor
+      </ion-list-header>
+        <!-- input to write amount that you want to convert -->
+      <ion-item>
+        <ion-label stacked>Amount</ion-label>
+        <ion-input type="num" [(ngModel)]="amount" placeholder="Type here"></ion-input>
+      </ion-item>
+      <!-- Account-From Select -->
+      <ion-item class="selectHasImg">
+        <ion-label stacked>From</ion-label>
+        <!--  <ion-select (ionChange)="change()" [ngStyle]="{'background-image':'url(' + fromImg + ')'}"
+                      [(ngModel)]="fromCountry">  -->
+        <ion-select (ionChange)="change()" [(ngModel)]="fromCountry">
+            <ion-option value="cryptoeuro" >CRYPTOEURO</ion-option>
+            <ion-option value="euro" >EURO</ion-option>
+          </ion-select>
+      </ion-item>
+      <!-- Account-To Select -->
+      <ion-item class="selectHasImg">
+        <ion-label stacked>To</ion-label>
+        <!--     <ion-select (ionChange)="change()" [ngStyle]="{'background-image':'url(' + toImg + ')'}"
+                      [(ngModel)]="toCountry">  -->
+        <ion-select (ionChange)="change()" [(ngModel)]="toCountry">
+            <ion-option value="cryptoeuro" >CRYPTOEURO</ion-option>
+            <ion-option value="euro" >EURO</ion-option>
+          </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+  <!-- button to show convert result -->
+  <button ion-button block clear (click)="showResult()">Result Here</button>
+  <p class="result" *ngIf="show == true">{{result}}</p>
+  <p>
+   1 CRYPTOEURO = 1,2 EURO
+ </p>
+</ion-content>

@@ -1,0 +1,37 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Beneficiaries</ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div class="appForm">
+    <ion-list>
+      <ion-list-header>
+          Beneficiaries
+      </ion-list-header>
+      
+      <button  block ion-item (click)="goTo('AddAccountPage')">
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+        Other Account
+      </button> 
+
+      <button  block ion-item (click)="goTo('AddAccountPage')">
+        <ion-icon item-right name="md-arrow-dropright"></ion-icon>
+        Other Cards
+      </button> 
+    </ion-list> 
+  </div>
+</ion-content>

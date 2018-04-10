@@ -1,0 +1,43 @@
+
+<ion-header>
+
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Add Account</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="appForm">
+    <ion-list>
+      <ion-list-header>
+          Add Account
+      </ion-list-header>
+
+      <!-- Add new Button -->
+      <button  block ion-item (click)="newAdd()" *ngIf="show == true">
+        <ion-icon item-right name="ios-add"></ion-icon>
+        Add / Pay New
+      </button> 
+      
+      <!--  NickName Input -->
+      <ion-item>
+        <ion-label stacked>NickName</ion-label>
+        <ion-input type="text" [(ngModel)]="nickName" placeholder="Nick Name"></ion-input>
+      </ion-item> 
+      <!-- Account Number Input -->
+      <ion-item>
+        <ion-label stacked>Account Number</ion-label>
+        <ion-input type="num" [(ngModel)]="accountNumber" placeholder="Beneficiary / Account Number"></ion-input>
+      </ion-item> 
+    </ion-list> 
+  </div>
+  <button ion-button block color="color2" (click)="apperAddBtn()">Save</button>
+  <button ion-button block color="color1" (click)="setRootFun('TransferPage')">Save & Transfer</button>
+</ion-content>

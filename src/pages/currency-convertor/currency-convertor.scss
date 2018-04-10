@@ -1,0 +1,13 @@
+page-currency-convertor {
+    .button-ios{
+        &.button-clear-ios{
+            border:1px solid color($colors,color2);
+            margin:$mainMarg*2 0px;
+            border-radius:$mainRadius;
+            .button-inner{
+                color: color($colors,color5);
+            }
+        }
+    }
+}
+

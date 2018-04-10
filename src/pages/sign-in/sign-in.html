@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>SIGN IN</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="appForm">
+    <ion-list>
+      <!-- Email input -->
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-icon name="ios-mail-outline" item-left></ion-icon>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <!-- password input -->
+      <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-icon name="ios-lock-outline" item-left></ion-icon>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+  <button ion-button block color="color2" (click)="doLogin('SummaryPage')">Sign in</button>
+  <p float-right (click)=" presentModal('ForgotPasswordPage')">Forgot Password ?</p>
+  <button full ion-button (click)="loginWithFB()">Login with Facebook</button>
+
+</ion-content>

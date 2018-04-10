@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start >
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="ios-menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>Transfer / Payment </ion-title>
+    <ion-buttons end >
+      <button ion-button icon-only (click)="logOut()">
+        <ion-icon name="ios-log-out"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div class="appForm">
+    <ion-list>
+      <ion-list-header>
+          Transfer
+      </ion-list-header>
+      <!-- Accoun-From Select -->
+      <ion-item >
+        <ion-label stacked>From</ion-label>
+          <ion-select   [(ngModel)]="fromAccount">
+             <ion-option value="account" *ngIf="fromAccount =='account'">account</ion-option> 
+             <ion-option value="account1" >126535837567</ion-option> 
+             <ion-option value="account2" >989726517221</ion-option> 
+             <ion-option value="account3" >987890265622</ion-option> 
+          </ion-select>
+      </ion-item>
+      <!-- Account-To Select -->
+      <ion-item >
+        <ion-label stacked>To</ion-label>
+          <ion-select   [(ngModel)]="toAccount">
+             <ion-option value="account" *ngIf="toAccount =='account'" >account</ion-option> 
+             <ion-option value="account1" >56535435882</ion-option> 
+             <ion-option value="account2" >87663223321</ion-option> 
+             <ion-option value="account3" >987545r27725</ion-option> 
+          </ion-select>
+      </ion-item>
+        <!-- amount Input -->
+      <ion-item>
+        <ion-label stacked>Amount</ion-label>
+        <ion-input type="num" [(ngModel)]="amount" placeholder="Type here"></ion-input>
+      </ion-item> 
+    </ion-list> 
+  </div>
+  <button ion-button block color="color2" (click)="showResult()">Continue</button>
+  <p class="result" *ngIf="show == true">{{result}}</p>
+</ion-content>
+

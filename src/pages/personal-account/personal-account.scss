@@ -1,0 +1,29 @@
+page-personal-account {
+    .content-ios{
+        .scroll-content{
+            padding:$mainMarg 0px !important;
+            .myTitle{
+                padding:0px $mainMarg;
+            }
+            .grid{
+                padding:$mainMarg/2;
+                .col{
+                    padding:$mainMarg/2;
+                    .account{
+                        padding:$mainMarg;
+                        @extend %boxShadow;
+                        background-color:color($colors,light);
+                        border-radius:$mainRadius;
+                        p{
+                            margin:$mainMarg 0px 0px 0px;
+                            @include whiteNoWrap(16px);
+                            &:first-of-type{
+                                margin-top:0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
